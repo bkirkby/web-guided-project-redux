@@ -19,7 +19,7 @@ class DragonList extends React.Component {
       <>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
-            <h4 key={index}>
+            <h4 key={index} onClick={actionCreator}>
               {member.name}
               {member.dragonStatus && <p>🐉</p>}
             </h4>
@@ -72,5 +72,7 @@ export default connect(mapStateToProps, {})(DragonList); // connect() => functio
  *    mapFn(store.getState())
  *  }
  *
+ *
+ *  Connect handles dispatching actions
  *
  */

@@ -1,7 +1,7 @@
 const initialState = {
   members: [
-    { name: "Jojo Zhang", dragonStatus: true },
-    { name: "Brandon Harris", dragonStatus: false },
+    { name: "Jojo Zhang", dragonStatus: true, id: 1 },
+    { name: "Brandon Harris", dragonStatus: false, id: 2 },
   ],
   anotherProp: {},
 };
