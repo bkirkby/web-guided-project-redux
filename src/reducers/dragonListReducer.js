@@ -5,6 +5,9 @@ const initialState = {
   ],
 };
 
-const dragonListReducer = () => {
-  return {};
+const dragonListReducer = (state, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
 };

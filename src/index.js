@@ -7,13 +7,6 @@ import Title from "./components/Title";
 import DragonList from "./components/DragonList";
 import "./styles.css";
 
-const reducer = () => {
-  return {
-    name: "Donald Duck",
-    company: "Disney",
-  };
-};
-
 // STEP 1: Create the store
 const store = createStore(
   reducer,
