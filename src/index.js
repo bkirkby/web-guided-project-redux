@@ -15,9 +15,10 @@ const reducer = () => {
 };
 
 // STEP 1: Create the store
-const store = createStore(reducer);
-
-console.log(store.getState());
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
   );
 }
 
+// STEP 1a: wrap Provider component around App and pass in the store as a prop
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <Provider store={store}>
