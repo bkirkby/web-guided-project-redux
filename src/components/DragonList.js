@@ -37,4 +37,13 @@ class DragonList extends React.Component {
 }
 
 // use connect() HOC
-export default connect(DragonList);
+export default connect()(DragonList); // connect() => function ; connect()() => function currying
+
+/***** Connect Wizardry 🧙‍♂️ *****/
+/**
+ *
+ *  second call takes component as an argument so it can be connected to the store
+ *
+ *
+ *
+ */
