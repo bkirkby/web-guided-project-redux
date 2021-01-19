@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
 };
 
 // use connect() HOC
-export default connect(mapStateToProps)(DragonList); // connect() => function ; connect()() => function currying
+export default connect(mapStateToProps, {})(DragonList); // connect() => function ; connect()() => function currying
 
 /***** Connect Wizardry 🧙‍♂️ *****/
 /**
