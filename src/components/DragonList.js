@@ -42,6 +42,7 @@ export default connect((state) => {
   // we now have access to the WHOLE redux store!
   return {
     areYouThere: true,
+    members: state.members,
   };
 })(DragonList); // connect() => function ; connect()() => function currying
 
