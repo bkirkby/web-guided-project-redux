@@ -5,9 +5,11 @@ const initialState = {
   ],
 };
 
-const dragonListReducer = (state, action) => {
+export const dragonListReducer = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
+
+// const [state, dispatch] = useReducer(reducer, initialState)
