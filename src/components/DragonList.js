@@ -16,7 +16,7 @@ class DragonList extends React.Component {
   render() {
     console.log("**************", this.props);
     return (
-      <React.Fragment>
+      <div>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
             <h4 key={index}>
@@ -32,7 +32,7 @@ class DragonList extends React.Component {
           placeholder="Add new member"
         />
         <button>Add member</button>
-      </React.Fragment>
+      </div>
     );
   }
 }
@@ -61,6 +61,12 @@ export default connect(mapStateToProps, {})(DragonList); // connect() => functio
  *
  *  second call takes component as an argument so it can be connected to the store
  *
+ *
+ *  Connect function, under the hood, calls `store.getState()`
+ *
+ *  const connect = (mapFn, obj) => {
+ *    mapFn(store.getState())
+ *  }
  *
  *
  */
