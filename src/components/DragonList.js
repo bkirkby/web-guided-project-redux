@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { toggleDragonStatus } from "../actions/dragonListActions";
+
 // STEP 2: connect a component to the Redux store
 // import connect - HOC (Higher order component)
 
@@ -19,7 +21,7 @@ class DragonList extends React.Component {
       <>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
-            <h4 key={index} onClick={actionCreator}>
+            <h4 key={index} onClick={}>
               {member.name}
               {member.dragonStatus && <p>🐉</p>}
             </h4>
@@ -50,7 +52,7 @@ const mapStateToProps = (state) => {
 };
 
 // use connect() HOC
-export default connect(mapStateToProps, {})(DragonList); // connect() => function ; connect()() => function currying
+export default connect(mapStateToProps, { toggleDragonStatus })(DragonList); // connect() => function ; connect()() => function currying
 
 /***** Connect Wizardry 🧙‍♂️ *****/
 /**
