@@ -1,4 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
+
+// STEP 2: connect a component to the Redux store
+// import connect - HOC (Higher order component)
 
 class DragonList extends React.Component {
   state = {
@@ -32,4 +36,5 @@ class DragonList extends React.Component {
   }
 }
 
-export default DragonList;
+// use connect() HOC
+export default connect(DragonList);
