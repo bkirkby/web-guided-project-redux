@@ -37,14 +37,16 @@ class DragonList extends React.Component {
   }
 }
 
-// use connect() HOC
-export default connect((state) => {
+const mapStateToProps = (state) => {
   // we now have access to the WHOLE redux store!
   return {
     areYouThere: true,
     members: state.members,
   };
-})(DragonList); // connect() => function ; connect()() => function currying
+};
+
+// use connect() HOC
+export default connect(mapStateToProps)(DragonList); // connect() => function ; connect()() => function currying
 
 /***** Connect Wizardry 🧙‍♂️ *****/
 /**
@@ -54,6 +56,7 @@ export default connect((state) => {
  *    - function that will map the state from Redux to the component
  *        - the function is called by "connect" and is passed the state obj
  *        - the function will return an object. that object's properties will be added to the connected component's props
+ *        - usually defined outside of connect and passed in
  *    - object
  *
  *  second call takes component as an argument so it can be connected to the store
