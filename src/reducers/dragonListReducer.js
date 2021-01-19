@@ -3,6 +3,7 @@ const initialState = {
     { name: "Jojo Zhang", dragonStatus: true },
     { name: "Brandon Harris", dragonStatus: false },
   ],
+  anotherProp: {},
 };
 
 export const dragonListReducer = (state = initialState, action) => {

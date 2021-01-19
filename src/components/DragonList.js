@@ -2,7 +2,7 @@ import React from "react";
 
 class DragonList extends React.Component {
   state = {
-    newMember: "",
+    newMember: "", // component state -> do not add to redux
   };
 
   handleChanges = (e) => {
