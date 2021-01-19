@@ -16,6 +16,8 @@ const reducer = () => {
 // STEP 1: Create the store
 const store = createStore(reducer);
 
+console.log(store);
+
 function App() {
   return (
     <div className="App">
