@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
+import { Provider } from "react-redux";
 
 import Title from "./components/Title";
 import DragonList from "./components/DragonList";
@@ -28,4 +29,9 @@ function App() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <Provider>
+    <App />
+  </Provider>,
+  rootElement
+);
