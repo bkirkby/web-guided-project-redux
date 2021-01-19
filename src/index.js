@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createStore } from "redux";
 
 import Title from "./components/Title";
 import DragonList from "./components/DragonList";
 import "./styles.css";
 
 // STEP 1: Create the store
+const store = createStore();
 
 function App() {
   return (
