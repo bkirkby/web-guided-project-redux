@@ -21,7 +21,7 @@ class DragonList extends React.Component {
           {this.props.members.map((member, index) => (
             <h4 key={index}>
               {member.name}
-              {member.dragonStatus && <i className="fas fa-dragon" />}
+              {member.dragonStatus && <p>🐉</p>}
             </h4>
           ))}
         </div>
