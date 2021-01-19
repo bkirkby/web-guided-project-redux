@@ -1,15 +1,11 @@
-import React from 'react';
+import React from "react";
 
 class DragonList extends React.Component {
   state = {
-    newMember: '',
-    members: [
-      { name: 'Jojo Zhang', dragonStatus: true },
-      { name: 'Brandon Harris', dragonStatus: false }
-    ]
+    newMember: "",
   };
 
-  handleChanges = e => {
+  handleChanges = (e) => {
     this.setState({ newMember: e.target.value });
   };
 
