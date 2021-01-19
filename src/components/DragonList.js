@@ -21,7 +21,7 @@ class DragonList extends React.Component {
       <>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
-            <h4 key={index} onClick={}>
+            <h4 key={index} onClick={this.props.toggleDragonStatus}>
               {member.name}
               {member.dragonStatus && <p>🐉</p>}
             </h4>
@@ -64,6 +64,7 @@ export default connect(mapStateToProps, { toggleDragonStatus })(DragonList); // 
  *        - the function will return an object. that object's properties will be added to the connected component's props
  *        - usually defined outside of connect and passed in
  *    - object takes in any action creator function we need and pass it to the component's props
+ *        - connect, uTH, takes the action creator and wraps the dispatch function around the action creator invocation:
  *
  *  second call takes component as an argument so it can be connected to the store
  *
@@ -72,6 +73,8 @@ export default connect(mapStateToProps, { toggleDragonStatus })(DragonList); // 
  *
  *  const connect = (mapFn, obj) => {
  *    mapFn(store.getState())
+ *
+ *    store.dispatch({ type: TOGGLE_DRAGON_STATUS })
  *  }
  *
  *
