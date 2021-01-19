@@ -14,6 +14,7 @@ class DragonList extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <React.Fragment>
         <div className="friends-list">
@@ -37,10 +38,22 @@ class DragonList extends React.Component {
 }
 
 // use connect() HOC
-export default connect()(DragonList); // connect() => function ; connect()() => function currying
+export default connect((state) => {
+  // we now have access to the WHOLE redux store!
+  return {
+    areYouThere: true,
+  };
+})(DragonList); // connect() => function ; connect()() => function currying
 
 /***** Connect Wizardry 🧙‍♂️ *****/
 /**
+ *
+ *  first call:
+ *    two args
+ *    - function that will map the state from Redux to the component
+ *        - the function is called by "connect" and is passed the state obj
+ *        - the function will return an object. that object's properties will be added to the connected component's props
+ *    - object
  *
  *  second call takes component as an argument so it can be connected to the store
  *
