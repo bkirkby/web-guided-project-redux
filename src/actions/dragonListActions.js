@@ -4,8 +4,8 @@
 // action types => Save action types to a variable to avoid spelling errors
 
 //action type:
-const TOGGLE_DRAGON_STATUS = "TOGGLE_DRAGON_STATUS";
+export const TOGGLE_DRAGON_STATUS = "TOGGLE_DRAGON_STATUS";
 // action creator
-export const toggleDragonStatus = () => {
-  return { type: TOGGLE_DRAGON_STATUS }; // action object
+export const toggleDragonStatus = (memberId) => {
+  return { type: TOGGLE_DRAGON_STATUS, payload: memberId }; // action object
 };
