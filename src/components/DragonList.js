@@ -39,9 +39,13 @@ class DragonList extends React.Component {
 
 const mapStateToProps = (state) => {
   // we now have access to the WHOLE redux store!
+
+  // you can do any JS stuff here
+  const memberCount = state.members.length;
   return {
-    areYouThere: true,
-    members: state.members,
+    areYouThere: true, // we can add anything to props from right here
+    members: state.members, // we can add something to props from the Redux store
+    memberCount: memberCount,
   };
 };
 
