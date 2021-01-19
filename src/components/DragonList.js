@@ -16,7 +16,7 @@ class DragonList extends React.Component {
   render() {
     console.log("**************", this.props);
     return (
-      <div>
+      <>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
             <h4 key={index}>
@@ -32,7 +32,7 @@ class DragonList extends React.Component {
           placeholder="Add new member"
         />
         <button>Add member</button>
-      </div>
+      </>
     );
   }
 }
