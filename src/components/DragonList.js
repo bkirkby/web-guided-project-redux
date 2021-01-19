@@ -63,7 +63,7 @@ export default connect(mapStateToProps, { toggleDragonStatus })(DragonList); // 
  *        - the function is called by "connect" and is passed the state obj
  *        - the function will return an object. that object's properties will be added to the connected component's props
  *        - usually defined outside of connect and passed in
- *    - object
+ *    - object takes in any action creator function we need and pass it to the component's props
  *
  *  second call takes component as an argument so it can be connected to the store
  *
