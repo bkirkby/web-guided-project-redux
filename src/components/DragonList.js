@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { addNewMember } from '../actions';
+import { addNewMember, toggleDragonStatus } from '../actions';
 
 class DragonList extends React.Component {
   state = {
@@ -19,6 +19,11 @@ class DragonList extends React.Component {
   handleAddMember = e => {
     e.preventDefault();
     this.props.addNewMember(this.state.newMember);
+  };
+
+  changeDragonStatus = (memberName) => {
+    e.preventDefault();
+    this.props.toggleDragonStatus(memberName)
   }
 
   render() {
@@ -26,7 +31,7 @@ class DragonList extends React.Component {
       <React.Fragment>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
-            <h4 key={index}>
+            <h4 key={index} onClick={(e) => changeDragonStatus(member.name)}>
               {member.name}
               {member.dragonStatus && <i className="fas fa-dragon" />}
             </h4>
