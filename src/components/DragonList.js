@@ -17,9 +17,9 @@ class DragonList extends React.Component {
     this.props.addNewMember(this.state.newMember);
   }
 
-  updateDragonStatus = (e, memberName) => {
+  updateDragonStatus = (e, index) => {
     e.preventDefault();
-    this.props.toggleDragonStatus(memberName);
+    this.props.toggleDragonStatus(index);
   }
 
   render() {
@@ -27,7 +27,7 @@ class DragonList extends React.Component {
       <React.Fragment>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
-            <h4 key={index} onClick={e => this.updateDragonStatus(e, member.name)}>
+            <h4 key={index} onClick={e => this.updateDragonStatus(e, index)}>
               {member.name}
               {member.dragonStatus && <i className="fas fa-dragon">🐲</i>}
             </h4>
