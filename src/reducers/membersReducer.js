@@ -1,4 +1,4 @@
-export const ADD_NEW_MEMBER = 'ADD_NEW_MEMBER';
+import { ADD_NEW_MEMBER } from '../actions';
 
 export const initialValues = {
   members: [
