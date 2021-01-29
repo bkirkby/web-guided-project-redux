@@ -36,9 +36,10 @@ const Title = (props) => {
               onChange={handleChanges}
             />
             <button
-              onClick={() =>
-                dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
-              }
+              onClick={() => {
+                dispatch({ type: 'UPDATE_TITLE', payload: newTitleText });
+                props.toggleEditing();
+              }}
             >
               Update title
           </button>
