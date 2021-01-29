@@ -23,9 +23,9 @@ export const addNewMember = (newMemberName) => {
   }
 }
 
-export const toggleDragonStatus = (memberName) => {
+export const toggleDragonStatus = (memberIdx) => {
   return {
     type: TOGGLE_DRAGON_STATUS,
-    payload: memberName
+    payload: memberIdx
   }
 }
