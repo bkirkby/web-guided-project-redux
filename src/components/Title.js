@@ -45,7 +45,7 @@ const Title = () => {
 
 const mapStateToProps = state => {
   return {
-    editingOnProps: state.editing
+    editing: state.editing
   }
 }
 
