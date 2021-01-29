@@ -1,4 +1,4 @@
-import { TOGGLE_EDITING } from '../actions';
+import { TOGGLE_EDITING, UPDATE_TITLE } from '../actions';
 
 export const initialState = {
   title: "Dragon Member List 🐲",
@@ -7,7 +7,7 @@ export const initialState = {
 
 export const titleReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "UPDATE_TITLE":
+    case UPDATE_TITLE:
       return {
         ...state,
         title: action.payload,
