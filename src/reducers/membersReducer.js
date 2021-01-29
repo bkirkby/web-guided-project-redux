@@ -1,4 +1,4 @@
-import { ADD_NEW_MEMBER } from '../actions';
+import { ADD_NEW_MEMBER, TOGGLE_DRAGON_STATUS } from '../actions';
 
 export const initialValues = {
   members: [
