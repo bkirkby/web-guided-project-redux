@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'react';
+import { Provider } from 'react-redux';
 
 import Title from './components/Title';
 import DragonList from './components/DragonList';
@@ -19,4 +20,4 @@ function App() {
 }
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Provider store={store}><App /></Provider >, rootElement);
