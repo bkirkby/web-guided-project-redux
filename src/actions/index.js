@@ -7,8 +7,9 @@ export const toggleEditing = () => {
   }
 };
 
-export const updateTitle = () => {
+export const updateTitle = (newTitle) => {
   return {
-    type: UPDATE_TITLE
+    type: UPDATE_TITLE,
+    payload: newTitle
   }
-}
+};
