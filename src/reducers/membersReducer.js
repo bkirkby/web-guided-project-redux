@@ -1,4 +1,4 @@
-import { ADD_NEW_MEMBER } from '../actions';
+import { ADD_NEW_MEMBER, TOGGLE_DRAGON_STATUS } from '../actions';
 
 const initialValue = {
   members: [
@@ -12,6 +12,18 @@ export const membersReducer = (state = initialValue, action) => {
     case ADD_NEW_MEMBER: return {
       ...state,
       members: [...state.members, { name: action.payload, dragonStatus: false }]
+    }
+    case TOGGLE_DRAGON_STATUS: return {
+      ...state,
+      members: state.members.map(member => {
+        if (member.name === action.payload) {
+          return {
+            ...member,
+            dragonStatus: !member.dragonStatus
+          }
+        }
+        return member;
+      })
     }
     default: return state;
   }
