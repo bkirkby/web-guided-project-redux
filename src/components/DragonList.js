@@ -33,7 +33,7 @@ class DragonList extends React.Component {
           {this.props.members.map((member, index) => (
             <h4 key={index} onClick={(e) => this.changeDragonStatus(e, member.name)}>
               {member.name}
-              {member.dragonStatus && <i className="fas fa-dragon" />}
+              {member.dragonStatus && <i className="fas fa-dragon" >🐲</i>}
             </h4>
           ))}
         </div>
