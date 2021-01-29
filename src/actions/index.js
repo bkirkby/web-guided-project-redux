@@ -13,3 +13,10 @@ export const updateTitle = (newTitle) => {
     payload: newTitle
   }
 }
+
+export const addNewMember = (newMemberName) => {
+  return {
+    type: ADD_NEW_MEMBER,
+    payload: newMemberName
+  }
+}
