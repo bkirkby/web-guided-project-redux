@@ -20,6 +20,7 @@ const Title = (props) => {
             className="far fa-edit"
             onClick={() => {
               //dispatch({ type: 'TOGGLE_EDITING' })
+              // dispatch and action through redux!!!
             }}
           >✎</i>
         </h1>
