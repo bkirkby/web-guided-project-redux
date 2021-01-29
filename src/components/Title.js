@@ -1,4 +1,5 @@
 import React, { useState, useReducer } from 'react';
+import { connect } from 'react-redux';
 
 import { initialState, titleReducer } from '../reducers/titleReducer';
 
