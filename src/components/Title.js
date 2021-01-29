@@ -53,5 +53,5 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(Title);
+export default connect(mapStateToProps, { toggleEditing })(Title);
 // export default Title;
