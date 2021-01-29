@@ -5,3 +5,10 @@ export const toggleEditing = () => {
     type: TOGGLE_EDITING
   }
 }
+
+export const updateTitle = (newTitle) => {
+  return {
+    type: UPDATE_TITLE,
+    payload: newTitle
+  }
+}
