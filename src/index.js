@@ -6,9 +6,9 @@ import { Provider } from 'react-redux';
 import Title from './components/Title';
 import DragonList from './components/DragonList';
 import './styles.css';
-import { titleReducer } from './reducers/titleReducer';
+import rootReducer from './reducers';
 
-const reduxStore = createStore(titleReducer);
+const reduxStore = createStore(rootReducer);
 
 function App() {
   return (
