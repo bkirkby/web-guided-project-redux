@@ -16,11 +16,16 @@ class DragonList extends React.Component {
     this.setState({ newMember: e.target.value });
   };
 
+  handleAddMember = e => {
+    e.preventDefault();
+    this.props.addNewMember(this.state.newMember);
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className="friends-list">
-          {this.state.members.map((member, index) => (
+          {this.props.members.map((member, index) => (
             <h4 key={index}>
               {member.name}
               {member.dragonStatus && <i className="fas fa-dragon" />}
@@ -33,7 +38,7 @@ class DragonList extends React.Component {
           onChange={this.handleChanges}
           placeholder="Add new member"
         />
-        <button>Add member</button>
+        <button onClick={this.handleAddMember}>Add member</button>
       </React.Fragment>
     );
   }
