@@ -43,5 +43,9 @@ const Title = () => {
   );
 };
 
-export default connect(() => { }, {})(Title);
+const mapStateToProps = state => {
+
+}
+
+export default connect(mapStateToProps, {})(Title);
 // export default Title;
