@@ -6,7 +6,7 @@ import { toggleEditing, updateTitle } from '../actions';
 
 const Title = (props) => {
   const [newTitleText, setNewTitleText] = useState();
-  const [state, dispatch] = useReducer(titleReducer, initialState);
+  // const [state, dispatch] = useReducer(titleReducer, initialState);
 
   const handleChanges = e => {
     setNewTitleText(e.target.value);
@@ -16,7 +16,7 @@ const Title = (props) => {
     <div>
       {!props.editing ? (
         <h1>
-          {state.title}{' '}
+          {props.title}{' '}
           <i
             onClick={props.toggleEditing}
           >✎</i>
@@ -32,8 +32,9 @@ const Title = (props) => {
             />
             <button
               onClick={() => {
-                dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
-                props.toggleEditing()
+                //dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
+                //props.toggleEditing()
+                props.updateTitle(newTitleText);
               }}
             >
               Update title
