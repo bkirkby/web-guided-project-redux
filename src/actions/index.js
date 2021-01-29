@@ -22,3 +22,10 @@ export const addNewMember = (newMemberName) => {
     payload: newMemberName
   }
 }
+
+export const toggleDragonStatus = (memberName) => {
+  return {
+    type: TOGGLE_DRAGON_STATUS,
+    payload: memberName
+  }
+}
