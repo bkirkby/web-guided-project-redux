@@ -4,6 +4,7 @@ export const initialState = {
 };
 
 export const titleReducer = (state = initialState, action) => {
+  console.log("bk: titlereducer.js: titleReducer: state: ", state)
   switch (action.type) {
     case "UPDATE_TITLE":
       return {
