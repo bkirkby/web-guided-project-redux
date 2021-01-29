@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { addNewMember } from '../actions';
+
 class DragonList extends React.Component {
   state = {
     newMember: '',
