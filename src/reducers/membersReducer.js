@@ -1,3 +1,4 @@
+import { ADD_NEW_MEMBER } from '../actions';
 
 const initialValue = {
   members: [
