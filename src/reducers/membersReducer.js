@@ -9,7 +9,7 @@ export const initialValues = {
 
 export const membersReducer = (state = initialValues, action) => {
   switch (action.type) {
-    case ADD_NEW_MEMBER: return { ...state, members: [{ name: action.payload, dragonStatus: false }] }
+    case ADD_NEW_MEMBER: return { ...state, members: [...state.members, { name: action.payload, dragonStatus: false }] }
     default: return state;
   }
 }
