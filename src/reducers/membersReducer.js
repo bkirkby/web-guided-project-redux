@@ -19,6 +19,7 @@ export const membersReducer = (state = initialValues, action) => {
     case TOGGLE_DRAGON_STATUS: return {
       ...state,
       members: state.members.map(member => {
+        console.log('bk: membersReducer.js: TOGGLE_DRAGON_STATUS: member: ', member)
         if (member.name === action.payload) {
           return {
             ...member,
