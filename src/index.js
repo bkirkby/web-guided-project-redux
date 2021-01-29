@@ -7,7 +7,7 @@ import DragonList from './components/DragonList';
 import './styles.css';
 import { titleReducer } from './reducers/titleReducer';
 
-const reduxStore = createStore(/* reducer */);
+const reduxStore = createStore(titleReducer);
 
 function App() {
   return (
