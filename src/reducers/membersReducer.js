@@ -13,6 +13,6 @@ export const membersReducer = (state = initialValue, action) => {
       ...state,
       members: [...state.members, { name: action.payload, dragonStatus: false }]
     }
-    default: state;
+    default: return state;
   }
 }
