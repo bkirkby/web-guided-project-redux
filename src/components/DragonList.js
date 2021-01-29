@@ -14,7 +14,7 @@ class DragonList extends React.Component {
 
   handleAddMember = e => {
     e.preventDefault();
-    this.props.addNewMember(newMember);
+    this.props.addNewMember(this.state.newMember);
   }
 
   render() {
