@@ -13,7 +13,7 @@ const Title = () => {
 
   return (
     <div>
-      {!state.editing ? (
+      {!props.editing ? (
         <h1>
           {state.title}{' '}
           <i
