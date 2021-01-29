@@ -5,3 +5,9 @@ export const initialValues = {
     { name: 'Brandon Harris', dragonStatus: false }
   ]
 }
+
+export const membersReducer = (state, action) => {
+  switch (action.type) {
+    default: return state;
+  }
+}
