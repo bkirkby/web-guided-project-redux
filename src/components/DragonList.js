@@ -17,6 +17,11 @@ class DragonList extends React.Component {
     this.props.addNewMember(this.state.newMember);
   }
 
+  updateDragonStatus = (e, memberName) => {
+    e.preventDefault();
+    this.props.toggleDragonStatus(memberName);
+  }
+
   render() {
     return (
       <React.Fragment>
