@@ -43,6 +43,5 @@ const mapStateToProps = state => {
     members: state.members
   }
 }
-}
 
-export default DragonList;
+export default connect(mapStateToProps, { addNewMember }(DragonList);
