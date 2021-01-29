@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { initialState, titleReducer } from '../reducers/titleReducer';
 import { toggleEditing } from '../actions';
 
-const Title = () => {
+const Title = (props) => {
   const [newTitleText, setNewTitleText] = useState();
   const [state, dispatch] = useReducer(titleReducer, initialState);
 
@@ -14,11 +14,11 @@ const Title = () => {
 
   return (
     <div>
-      {!state.editing ? (
+      {!props.editing ? (
         <h1>
           {state.title}{' '}
           <i
-            onClick={() => dispatch({ type: 'TOGGLE_EDITING' })}
+            onClick={props.toggleEditing}
           >✎</i>
         </h1>
       ) : (
@@ -31,9 +31,10 @@ const Title = () => {
               onChange={handleChanges}
             />
             <button
-              onClick={() =>
+              onClick={() => {
                 dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
-              }
+                props.toggleEditing()
+              }}
             >
               Update title
           </button>
