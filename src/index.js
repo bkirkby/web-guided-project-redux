@@ -21,4 +21,4 @@ function App() {
 }
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Provider store={store}><App /></Provider>, rootElement);
