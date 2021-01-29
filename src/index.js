@@ -8,7 +8,7 @@ import { titleReducer } from './reducers/titleReducer';
 
 import './styles.css';
 
-const store = createStore()
+const store = createStore(titleReducer);
 
 function App() {
   return (
