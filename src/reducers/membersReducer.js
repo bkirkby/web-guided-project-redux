@@ -1,3 +1,4 @@
+export const ADD_NEW_MEMBER = 'ADD_NEW_MEMBER';
 
 export const initialValues = {
   members: [
