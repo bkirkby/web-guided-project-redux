@@ -22,6 +22,7 @@ const Title = (props) => {
             onClick={() => {
               //dispatch({ type: 'TOGGLE_EDITING' })
               // dispatch an action through redux!!!
+              props.toggleEditing();
             }}
           >✎</i>
         </h1>
