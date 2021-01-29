@@ -1,3 +1,5 @@
+import { TOGGLE_EDITING } from '../actions';
+
 export const initialState = {
   title: "Dragon Member List 🐲",
   editing: false
