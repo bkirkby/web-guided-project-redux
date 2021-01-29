@@ -6,10 +6,6 @@ import { addNewMember } from '../actions';
 class DragonList extends React.Component {
   state = {
     newMember: '',
-    members: [
-      { name: 'Jojo Zhang', dragonStatus: true },
-      { name: 'Brandon Harris', dragonStatus: false }
-    ]
   };
 
   handleChanges = e => {
