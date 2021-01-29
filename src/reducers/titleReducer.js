@@ -1,3 +1,5 @@
+import { TOGGLE_EDITING } from '../actions';
+
 export const initialState = {
   title: "Dragon Member List 🐲",
   editing: false
@@ -12,7 +14,7 @@ export const titleReducer = (state = initialState, action) => {
         editing: false
       };
     // NEW CASE HERE
-    case "TOGGLE_EDITING":
+    case TOGGLE_EDITING:
       return {
         ...state,
         editing: !state.editing
