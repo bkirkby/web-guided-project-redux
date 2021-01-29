@@ -16,7 +16,7 @@ const Title = (props) => {
     <div>
       {!props.editing ? (
         <h1>
-          {state.title}{' '}
+          {props.title}{' '}
           <i
             className="far fa-edit"
             onClick={() => {
@@ -38,8 +38,9 @@ const Title = (props) => {
             />
             <button
               onClick={() => {
-                dispatch({ type: 'UPDATE_TITLE', payload: newTitleText });
-                props.toggleEditing();
+                // dispatch({ type: 'UPDATE_TITLE', payload: newTitleText });
+                props.updateTitle(newTitleText);
+                // props.toggleEditing();
               }}
             >
               Update title
