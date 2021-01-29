@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class DragonList extends React.Component {
   state = {
@@ -33,6 +34,12 @@ class DragonList extends React.Component {
         <button>Add member</button>
       </React.Fragment>
     );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    members: state.members
   }
 }
 
