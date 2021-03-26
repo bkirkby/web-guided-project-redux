@@ -33,7 +33,7 @@ class DragonList extends React.Component {
           onChange={this.handleChanges}
           placeholder="Add new member"
         />
-        <button>Add member</button>
+        <button onClick={() => this.props.addMember(this.state.newMember)}>Add member</button>
       </React.Fragment>
     );
   }
