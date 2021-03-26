@@ -1,6 +1,6 @@
 import { TOGGLE_EDITING, UPDATE_TITLE } from '../actions';
 
-export const initialState = {
+const initialState = {
   title: "Dragon Member List 🐲",
   editing: false
 };
