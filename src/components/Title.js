@@ -18,7 +18,9 @@ const Title = (props) => {
           {props.title}{' '}
           <i
             className="far fa-edit"
-            onClick={() => dispatch({ type: 'TOGGLE_EDITING' })}
+            onClick={() => {
+              // dispatch({ type: 'TOGGLE_EDITING' })
+            }}
           ><button>edit</button></i>
         </h1>
       ) : (
@@ -31,9 +33,9 @@ const Title = (props) => {
             onChange={handleChanges}
           />
           <button
-            onClick={() =>
-              dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
-            }
+            onClick={() => {
+              // dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
+            }}
           >
             Update title
           </button>
