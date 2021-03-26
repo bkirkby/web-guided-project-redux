@@ -1,3 +1,5 @@
+import { TOGGLE_DRAGON_STATUS, ADD_MEMBER } from '../actions';
+
 const initialState = {
   members: [
     { name: 'Jojo Zhang', dragonStatus: true },
@@ -7,6 +9,19 @@ const initialState = {
 
 export const membersReducer = (state = initialState, action) => {
   switch (action.type) {
+    case TOGGLE_DRAGON_STATUS:
+      return {
+        ...state,
+        members: state.members.map(member => {
+          if (member.name === action.payload) {
+            return {
+              ...member,
+              dragonStatus: !member.dragonStatus
+            }
+          }
+          return member;
+        })
+      }
     default: return state
   }
 }
