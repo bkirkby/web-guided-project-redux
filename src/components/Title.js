@@ -22,6 +22,7 @@ const Title = (props) => {
             className="far fa-edit"
             onClick={() => {
               // dispatch({ type: 'TOGGLE_EDITING' })
+              props.toggleEditing();
             }}
           ><button>edit</button></i>
         </h1>
@@ -37,6 +38,7 @@ const Title = (props) => {
           <button
             onClick={() => {
               // dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
+              props.updateTitle(newTitleText);
             }}
           >
             Update title
