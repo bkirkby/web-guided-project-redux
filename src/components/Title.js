@@ -13,9 +13,9 @@ const Title = () => {
 
   return (
     <div>
-      {!state.editing ? (
+      {!props.editing ? (
         <h1>
-          {state.title}{' '}
+          {props.title}{' '}
           <i
             className="far fa-edit"
             onClick={() => dispatch({ type: 'TOGGLE_EDITING' })}
