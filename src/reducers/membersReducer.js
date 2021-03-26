@@ -5,7 +5,7 @@ const initialState = {
   ]
 }
 
-export const membersReducer = (state, action) => {
+export const membersReducer = (state = initialState, action) => {
   switch (action.type) {
     default: return state
   }
