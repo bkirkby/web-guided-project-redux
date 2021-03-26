@@ -55,5 +55,11 @@ const mapStateToProps = state => {
 }
 
 
+/*
+ {
+   toggleEditing: toggleEditing,
+   updateTitle: updateTitle
+ }
+*/
 
 export default connect(mapStateToProps, { toggleEditing, updateTitle })(Title);
