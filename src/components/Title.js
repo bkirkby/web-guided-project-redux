@@ -1,6 +1,8 @@
 import React, { useState, useReducer } from 'react';
 import { connect } from 'react-redux';
 
+import { toggleEditing, updateTitle } from '../actions';
+
 // import { initialState, titleReducer } from '../reducers/titleReducer';
 
 const Title = (props) => {
