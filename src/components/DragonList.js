@@ -43,4 +43,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default DragonList;
+export default connect(mapStateToProps, {})(DragonList);
