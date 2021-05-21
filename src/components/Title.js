@@ -18,7 +18,9 @@ const Title = props => {
           {props.titleOnProps}{' '}
           <i
             className="far fa-edit"
-            onClick={() => dispatch({ type: 'TOGGLE_EDITING' })}
+            onClick={() => {
+              dispatch({ type: 'TOGGLE_EDITING' })
+            }}
           >✎</i>
         </h1>
       ) : (
