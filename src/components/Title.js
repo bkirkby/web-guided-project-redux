@@ -43,4 +43,4 @@ const Title = () => {
   );
 };
 
-export default Title;
+export default connect(() => { }, {})(Title);
