@@ -25,7 +25,7 @@ export const membersReducer = (state = initialState, action) => {
             }
           }
           return member;
-        }
+        })
       }
     default: return state;
   }
