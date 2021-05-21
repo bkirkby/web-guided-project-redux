@@ -45,7 +45,7 @@ const Title = () => {
 
 const mapStateToProps = state => {
   return {
-    title: state.title
+    titleOnProps: state.title
   }
 }
 
