@@ -3,7 +3,7 @@ export const initialState = {
   editing: false
 };
 
-export const titleReducer = (state, action) => {
+export const titleReducer = (state = initialState, action) => {
   console.log('bk: titleReducer.js: titleReducer: state,action: ', state, action);
   switch (action.type) {
     case "UPDATE_TITLE":
@@ -19,9 +19,9 @@ export const titleReducer = (state, action) => {
         editing: !state.editing
       };
     default: {
-      if (state === undefined) {
-        return initialState;
-      }
+      // if (state === undefined) {
+      //   return initialState;
+      // }
       return state;
     }
   }
