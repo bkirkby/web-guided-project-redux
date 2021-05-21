@@ -1,4 +1,4 @@
-import { ADD_MEMBER } from '../actions';
+import { ADD_MEMBER, TOGGLE_DRAGON_STATUS } from '../actions';
 
 const initialState = {
   members: [
