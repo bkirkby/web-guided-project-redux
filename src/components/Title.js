@@ -52,8 +52,8 @@ const Title = props => {
 const mapStateToProps = state => {
   return {
     // titleOnProps: state.title,
-    title: state.title,
-    editing: state.editing
+    title: state.title.title,
+    editing: state.title.editing
   }
 }
 
