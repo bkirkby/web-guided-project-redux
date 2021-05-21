@@ -22,7 +22,7 @@ class DragonList extends React.Component {
       <React.Fragment>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
-            <h4 key={index} onClick={() => this.handleStatusToggle(member.name)}>
+            <h4 key={index} onClick={() => this.props.toggleDragonStatus(member.name)}>
               {member.name}
               {member.dragonStatus && <i className="fas fa-dragon">🐲</i>}
             </h4>
@@ -46,4 +46,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { addMember })(DragonList);
+export default connect(mapStateToProps, { addMember, toggleDragonStatus })(DragonList);
