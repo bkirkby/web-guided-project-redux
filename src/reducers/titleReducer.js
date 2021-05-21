@@ -20,7 +20,7 @@ export const titleReducer = (state, action) => {
       };
     default: {
       if (state === undefined) {
-        return initialSate;
+        return initialState;
       }
       return state;
     }
