@@ -17,7 +17,7 @@ const Title = props => {
     <div>
       {!props.editing ? (
         <h1>
-          {props.titleOnProps}{' '}
+          {props.title}{' '}
           <i
             className="far fa-edit"
             onClick={() => {
