@@ -12,7 +12,7 @@ export const membersReducer = (state = initialState, action) => {
     case ADD_MEMBER:
       return {
         ...state,
-        members: [...members, { name: action.payload, dragonStatus: false }]
+        members: [...state.members, { name: action.payload, dragonStatus: false }]
       }
     default: return state;
   }
