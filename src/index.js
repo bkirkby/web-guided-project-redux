@@ -12,12 +12,12 @@ const store = createStore(titleReducer);
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
+    <div className="App">
+      <Provider store={store}>
         <Title />
         <DragonList />
-      </div>
-    </Provider>
+      </Provider>
+    </div>
   );
 }
 
