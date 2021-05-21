@@ -9,7 +9,7 @@ import DragonList from './components/DragonList';
 import rootReducer from './reducers';
 import './styles.css';
 
-const store = createStore(titleReducer);
+const store = createStore(rootReducer);
 
 function App() {
   return (
