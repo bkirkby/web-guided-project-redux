@@ -18,7 +18,11 @@ export const titleReducer = (state, action) => {
         ...state,
         editing: !state.editing
       };
-    default:
+    default: {
+      if (state === undefined) {
+        return initialSate;
+      }
       return state;
+    }
   }
 };
