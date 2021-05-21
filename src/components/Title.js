@@ -18,7 +18,7 @@ const Title = () => {
           <i
             className="far fa-edit"
             onClick={() => dispatch({ type: 'TOGGLE_EDITING' })}
-          />
+          >edit✎</i>
         </h1>
       ) : (
         <div>
