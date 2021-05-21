@@ -1,13 +1,13 @@
 import React, { useState, useReducer } from 'react';
 import { connect } from 'react-redux';
 
-import { initialState, titleReducer } from '../reducers/titleReducer';
+// import { initialState, titleReducer } from '../reducers/titleReducer';
 
 import { toggleEditing, updateTitle } from '../actions';
 
 const Title = props => {
   const [newTitleText, setNewTitleText] = useState();
-  const [state, dispatch] = useReducer(titleReducer, initialState);
+  // const [state, dispatch] = useReducer(titleReducer, initialState);
 
   const handleChanges = e => {
     setNewTitleText(e.target.value);
@@ -36,9 +36,10 @@ const Title = props => {
             onChange={handleChanges}
           />
           <button
-            onClick={() =>
-              dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
-            }
+            onClick={() => {
+              // dispatch({ type: 'UPDATE_TITLE', payload: newTitleText })
+              props.updateTitle(newTitleText);
+            }}
           >
             Update title
           </button>
@@ -57,5 +58,6 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {
-  toggleEditing // toggleEditing: toggleEditing
+  toggleEditing, // toggleEditing: toggleEditing
+  updateTitle
 })(Title);
