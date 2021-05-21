@@ -43,4 +43,10 @@ const Title = () => {
   );
 };
 
+const mapStateToProps = state => {
+  return {
+    title: state.title
+  }
+}
+
 export default connect(() => { }, {})(Title);
