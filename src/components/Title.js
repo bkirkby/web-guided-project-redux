@@ -21,7 +21,8 @@ const Title = props => {
           <i
             className="far fa-edit"
             onClick={() => {
-              dispatch({ type: 'TOGGLE_EDITING' })
+              // dispatch({ type: 'TOGGLE_EDITING' })
+              props.toggleEditing()
             }}
           >✎</i>
         </h1>
